@@ -118,12 +118,23 @@ let crearSlide = (req, res)=>{
 }
 
 /* Peticiones PUT */
-/*let actualizarSlide (req, res)=>{
+let editarSlide = (req, res) =>{
+
+	//Capturamos el id el slide a actualizar
+
 	let id = req.params.id;
 
-	res.json({
-		id
-	})
+	//obtenemos el cuerpo del formulario
+
+	let body = req.body;
+
+	//Validamos que el ID exista
+
+	//Validamos el cambio de imagen
+
+	//Actualizamos los registros
+	
+
 }
 
 
