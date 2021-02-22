@@ -5,7 +5,7 @@ const http = require('http');
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-
+const fileUpload = require('express-fileupload');
 /* Creamos variable para tener funcionalidades de express */
 
 const app = express()
@@ -14,10 +14,14 @@ const app = express()
 /* Middleware para bodyParser, funciones que se ejecutan cuando se necesitan */
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }))
  
 // parse application/json
-app.use(bodyParser.json())
+app.use(bodyParser.json({ limit: '10mb', extended: true }))
+
+/* Middleware para express file upload */
+app.use(fileUpload());
+
 
 /* Importaciones de las rutas */
 app.use(require('./rutas/slide_ruta.js'));
