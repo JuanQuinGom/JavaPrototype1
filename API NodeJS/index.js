@@ -10,6 +10,11 @@ const fileUpload = require('express-fileupload');
 
 const app = express()
 
+/**DEPRECATIONS MONGOOSE*/
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
+mongoose.set('useUnifiedTopology', true);
 
 /* Middleware para bodyParser, funciones que se ejecutan cuando se necesitan */
 
