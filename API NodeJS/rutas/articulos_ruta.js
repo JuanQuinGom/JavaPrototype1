@@ -7,13 +7,14 @@ const app = express();
 
 /* importar controlador*/
 
-const Slide = require('../controladores/articulos_controlador.js');
+const Articulo = require('../controladores/articulos_controlador.js');
 
 //Rutas
 
-app.get('/mostrar-articulo', Slide.mostrarArticulo);
-
-
+app.get('/mostrar-articulos', Articulo.mostrarArticulo);
+app.post('/crear-articulos', Articulo.crearArticulo);
+app.put('/editar-articulos/:id', Articulo.editarArticulo);
+app.delete('/borrar-articulos/:id', Articulo.borrarArticulo);
 /* Exportar ruta */
 
 module.exports = app;

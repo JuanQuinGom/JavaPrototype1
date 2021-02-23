@@ -304,7 +304,28 @@ let borrarSlide = (req,res)=>{
 				err,
 			});
 		}
-	})
+		console.log("borrando");
+		//Boramos la antigua imagen
+		if (fs.existsSync(`./archivos/slides/${data.imagen}`)) {
+			fs.unlinkSync(`./archivos/slides/${data.imagen}`);
+		}
+
+		//Borramos registro en MongoDB
+		 Slide.findByIdAndRemove(id, (err,data) =>{
+		 	if (err) {
+				return res.json({
+					status: 500,
+					mensaje: "Error al borrar el Slide",
+					err
+				})
+			}
+
+			res.json({
+				status:200,
+				mensaje: "Slide borrado correctamente"
+			})
+		 })
+})
 }
 
 

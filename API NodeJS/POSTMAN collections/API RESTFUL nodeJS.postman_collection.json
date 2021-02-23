@@ -1,0 +1,389 @@
+{
+	"info": {
+		"_postman_id": "3db91c19-5e72-4315-9d94-49d07f4d5932",
+		"name": "API RESTFUL nodeJS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Borrar Slide",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{url}}/borrar-slide/603328c2bbd1ed15403fe867",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"borrar-slide",
+						"603328c2bbd1ed15403fe867"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Slide",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "archivo",
+							"type": "file",
+							"src": "/C:/Users/juan_/Downloads/08.ANGULAR.src/src/assets/img/slide/slide04.jpg"
+						},
+						{
+							"key": "titulo",
+							"value": "Foto 04",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": " mlakjflkdfjkljsfd  mlakjflkdfjkljsfd  mlakjflkdfjkljsfd  mlakjflkdfjkljsfd  mlakjflkdfjkljsfd  mlakjflkdfjkljsfd ",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/crear-slide?imagen=Imagen01.jpg&titulo=Imagen 01&descripcion=Probando el funcionamiento del body",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"crear-slide"
+					],
+					"query": [
+						{
+							"key": "imagen",
+							"value": "Imagen01.jpg"
+						},
+						{
+							"key": "titulo",
+							"value": "Imagen 01"
+						},
+						{
+							"key": "descripcion",
+							"value": "Probando el funcionamiento del body"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar Slide",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/mostrar-slide",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"mostrar-slide"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar Galeria",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/mostrar-galeria",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"mostrar-galeria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREAR galeria",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "archivo",
+							"type": "file",
+							"src": "/C:/Users/juan_/Downloads/08.ANGULAR.src/src/assets/img/galeria/01.jpg"
+						},
+						{
+							"key": "titulo",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "descripcion",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/crear-galeria?imagen",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"crear-galeria"
+					],
+					"query": [
+						{
+							"key": "imagen",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EDITAR galeria",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "archivo",
+							"type": "file",
+							"src": "/C:/Users/juan_/Downloads/08.ANGULAR.src/src/assets/img/galeria/01.jpg"
+						},
+						{
+							"key": "titulo",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "descripcion",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/editar-galeria/60346b7bf3407d0e245370e5",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"editar-galeria",
+						"60346b7bf3407d0e245370e5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrargaleria",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "archivo",
+							"type": "file",
+							"src": "/C:/Users/juan_/Downloads/08.ANGULAR.src/src/assets/img/galeria/01.jpg"
+						},
+						{
+							"key": "titulo",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "descripcion",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/borrar-galeria/60346b7bf3407d0e245370e5",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"borrar-galeria",
+						"60346b7bf3407d0e245370e5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar Articulos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/mostrar-articulos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"mostrar-articulos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREAR articulo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "archivo",
+							"type": "file",
+							"src": "/C:/Users/juan_/Downloads/08.ANGULAR.src/src/assets/img/galeria/06.jpg"
+						},
+						{
+							"key": "intro",
+							"value": "qweqweq",
+							"type": "text"
+						},
+						{
+							"key": "contenido",
+							"value": "qwewqewqewqeqwe",
+							"type": "text"
+						},
+						{
+							"key": "url",
+							"value": "eqwewqe",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/crear-articulo",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"crear-articulo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EDITAR articulo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "archivo",
+							"type": "file",
+							"src": "/C:/Users/juan_/Downloads/08.ANGULAR.src/src/assets/img/galeria/01.jpg"
+						},
+						{
+							"key": "titulo",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "descripcion",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/editar-galeria/60346b7bf3407d0e245370e5",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"editar-galeria",
+						"60346b7bf3407d0e245370e5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar articulos",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "archivo",
+							"type": "file",
+							"src": "/C:/Users/juan_/Downloads/08.ANGULAR.src/src/assets/img/galeria/01.jpg"
+						},
+						{
+							"key": "titulo",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "descripcion",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/borrar-galeria/60346bf8f3407d0e245370ea",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"borrar-galeria",
+						"60346bf8f3407d0e245370ea"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
